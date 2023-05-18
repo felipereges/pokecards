@@ -1,0 +1,225 @@
+body {
+    font-family: 'Poppins', 'Varela Round', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-image: url(../images/light-theme-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #5e5b5bad;
+    color: #020202;
+}
+
+body.dark-theme {
+    background-image: url(../images/dark-theme-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #212121;
+    color: #ffffff;
+}
+
+.dark-theme .poke-card {
+    background-image: url('./../images/poke-card-dark-theme.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-theme .poke-card:hover {
+    background-image: url('./../images/poke-card-dark-theme2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header .logo {
+    width: 250px;
+    transition: 0.2s ease-in-out;
+}
+
+header .theme-button {
+    width: 35px;
+    transition: 0.2s ease-in-out;
+}
+
+header .logo:hover,
+header .theme-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+header #button-switch-theme {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body .gif-xs:hover,
+body .gif-s:hover,
+body .gif-m:hover,
+body .gif-b:hover,
+body .gif-xb:hover,
+body .gif-ekans:hover,
+body .gif-charmeleon:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main {
+    padding: 25px;
+}
+
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+main .poke-card {
+    background-image: url('./../images/poke-card-light-theme.png');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card:hover {
+    background-image: url('./../images/poke-card-light-theme2.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+main .poke-card .infos {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #333333;
+    border-radius: 10px;
+}
+
+main .poke-card .infos span {
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.dark-theme main .poke-card .infos {
+    border-color: #ffffff;
+}
+
+main .poke-card .gif-xs {
+    width: 55px;
+    height: 55px;
+    margin-top: 35px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card .gif-s {
+    width: 63px;
+    height: 63px;
+    margin-top: 27px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card .gif-m {
+    width: 78px;
+    height: 78px;
+    margin-top: 12px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card .gif-b {
+    width: 90px;
+    height: 90px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card .gif-xb {
+    width: 100px;
+    height: 100px;
+    transition: 0.2s ease-in-out;
+}
+
+main .poke-card .gif-ekans {
+    width: 70px;
+    height: 60px;
+    margin-top: 30px;
+    transition: 0.2s ease-in-out
+}
+
+main .poke-card .gif-charmeleon {
+    margin-left: 25px;
+    width: 92px;
+    height: 78px;
+    margin-top: 12px;
+    transition: 0.2s ease-in-out
+}
+
+main .poke-card .types {
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+main .poke-card .type {
+    font-weight: 500;
+    border: 1px outset #c7c7c7;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 6px;
+}
+
+.grass {
+    background-color: #7ac74c;
+}
+
+.poison {
+    background-color: #da4ad7fb;
+}
+
+.water {
+    background-color: #6390f0;
+}
+
+.fire {
+    background-color: #ee8130;
+}
+
+.flying {
+    background-color: #a0d6d3;
+}
+
+.bug {
+    background-color: #a6b91a;
+}
+
+.normal {
+    background-color: #b6ae8d;
+}
+
+.electric {
+    background-color: #e4c724;
+}
+
+main .description {
+    text-align: justify;
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 6px;
+}
