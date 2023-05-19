@@ -8,17 +8,11 @@ buttonSwitchTheme.addEventListener("click", () => {
         body.classList.toggle("dark-theme");
 
         if (darkThemeInUse) {
-                imgButtonSwitchTheme.setAttribute("src", "./src/images/sun.png")
+                imgButtonSwitchTheme.setAttribute("src", "./src/images/solrock.png")
         } else {
-                imgButtonSwitchTheme.setAttribute("src", "./src/images/moon.png")
+                imgButtonSwitchTheme.setAttribute("src", "./src/images/lunatone.png")
         }
 })
-
-window.addEventListener('DOMContentLoaded', function () {
-        var audio = document.getElementById('meuAudio');
-        audio.volume = 0.4;
-        audio.play();
-});
 
 const pokemonImg = document.querySelectorAll(".gif-xs, .gif-s, .gif-m, .gif-b, .gif-xb, .gif-ekans, .gif-charmeleon");
 
@@ -66,3 +60,11 @@ for (let i = 1; i <= 26; i++) {
                 element.style.cursor = "pointer";
         }
 }
+
+const playAudioButton = document.getElementById("play-audio-button");
+const audioElement = document.getElementById("audio-element");
+
+playAudioButton.addEventListener("click", () => {
+        audioElement.volume = 0.4;
+        audioElement.play();
+});

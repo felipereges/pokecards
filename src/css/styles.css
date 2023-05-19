@@ -31,7 +31,12 @@ body.dark-theme {
     background-position: center;
 }
 
+.dark-theme .description {
+    background-color: #93929f;
+}
+
 header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 25px;
@@ -42,9 +47,37 @@ header .logo {
     transition: 0.2s ease-in-out;
 }
 
+header .pikachu-running {
+    width: 80px;
+    margin-top: 25px;
+}
+
 header .theme-button {
-    width: 35px;
+    width: 80px;
+    margin-right: 7px;
     transition: 0.2s ease-in-out;
+}
+
+.theme-button {
+    position: relative;
+    animation-name: flutuar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 header .logo:hover,
@@ -85,8 +118,8 @@ main .poke-card {
     background-image: url('./../images/poke-card-light-theme.png');
     background-size: cover;
     background-position: center;
-    width: 200px;
-    padding: 15px;
+    width: 205px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,14 +138,18 @@ main .poke-card:hover {
 main .poke-card .infos {
     display: flex;
     justify-content: space-between;
-    border: 2px solid #333333;
+    border: 1px solid #161616;
+    background-color: #f5f5f549;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px #000000b4;
 }
 
 main .poke-card .infos span {
+    font-family: 'Varela Round', sans-serif;
     padding: 5px;
     text-transform: uppercase;
     font-size: 17px;
+    font-weight: 500;
 }
 
 .dark-theme main .poke-card .infos {
@@ -122,27 +159,28 @@ main .poke-card .infos span {
 main .poke-card .gif-xs {
     width: 55px;
     height: 55px;
-    margin-top: 35px;
+    margin-top: 45px;
     transition: 0.2s ease-in-out;
 }
 
 main .poke-card .gif-s {
     width: 63px;
     height: 63px;
-    margin-top: 27px;
+    margin-top: 37px;
     transition: 0.2s ease-in-out;
 }
 
 main .poke-card .gif-m {
     width: 78px;
     height: 78px;
-    margin-top: 12px;
+    margin-top: 22px;
     transition: 0.2s ease-in-out;
 }
 
 main .poke-card .gif-b {
     width: 90px;
     height: 90px;
+    margin-top: 10px;
     transition: 0.2s ease-in-out;
 }
 
@@ -163,7 +201,7 @@ main .poke-card .gif-charmeleon {
     margin-left: 25px;
     width: 92px;
     height: 78px;
-    margin-top: 12px;
+    margin-top: 22px;
     transition: 0.2s ease-in-out
 }
 
@@ -177,19 +215,20 @@ main .poke-card .types {
 
 main .poke-card .type {
     font-weight: 500;
-    border: 1px outset #c7c7c7;
     padding: 2px;
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 6px;
+    box-shadow: 1px 1px 4px #00000083;
 }
 
 .grass {
-    background-color: #7ac74c;
+
+    background-color: #74ca42;
 }
 
 .poison {
-    background-color: #da4ad7fb;
+    background-color: #ca2fbdfb;
 }
 
 .water {
@@ -217,9 +256,13 @@ main .poke-card .type {
 }
 
 main .description {
+    background-color: #ded6d2;
+    border-radius: 6px;
+    padding: 5px;
     text-align: justify;
     max-height: 80px;
     overflow-y: scroll;
     font-size: 14px;
     padding-right: 6px;
+    margin: -4px;
 }
