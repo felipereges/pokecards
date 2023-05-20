@@ -6,8 +6,60 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #5e5b5bad;
     color: #020202;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header .pikachu-running {
+    width: 75px;
+    margin-top: 25px;
+}
+
+header .logo {
+    width: 250px;
+    transition: 0.2s ease-in-out;
+}
+
+header .theme-button {
+    width: 80px;
+    margin-right: 7px;
+    position: relative;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+header .logo:hover,
+header #button-switch-theme:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+header #button-switch-theme {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 body.dark-theme {
@@ -15,7 +67,6 @@ body.dark-theme {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #212121;
     color: #ffffff;
 }
 
@@ -35,63 +86,6 @@ body.dark-theme {
     background-color: #93929f;
 }
 
-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
-}
-
-header .logo {
-    width: 250px;
-    transition: 0.2s ease-in-out;
-}
-
-header .pikachu-running {
-    width: 80px;
-    margin-top: 25px;
-}
-
-header .theme-button {
-    width: 80px;
-    margin-right: 7px;
-    transition: 0.2s ease-in-out;
-}
-
-.theme-button {
-    position: relative;
-    animation-name: flutuar;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes flutuar {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(0, 10px);
-    }
-
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-header .logo:hover,
-header .theme-button:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-header #button-switch-theme {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 body .gif-xs:hover,
 body .gif-s:hover,
 body .gif-m:hover,
@@ -101,6 +95,14 @@ body .gif-ekans:hover,
 body .gif-charmeleon:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.sparkle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 main {
@@ -265,4 +267,17 @@ main .description {
     font-size: 14px;
     padding-right: 6px;
     margin: -4px;
+}
+
+.to-top {
+    width: 55px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }

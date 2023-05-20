@@ -32,12 +32,9 @@ for (let i = 1; i <= 26; i++) {
 
                         const sparkleImg = document.createElement("img");
                         sparkleImg.src = "./src/images/sparkle.gif";
-                        sparkleImg.style.position = "absolute";
-                        sparkleImg.style.width = "100%";
-                        sparkleImg.style.height = "100%";
-                        sparkleImg.style.top = "0";
-                        sparkleImg.style.left = "0";
                         buttonSwitchSprite.style.position = "relative";
+                        sparkleImg.style.imageRendering = "pixelated";
+                        sparkleImg.classList.add("sparkle-image");
 
                         buttonSwitchSprite.appendChild(sparkleImg);
 
@@ -46,6 +43,8 @@ for (let i = 1; i <= 26; i++) {
                         }, 1000);
 
                         pokemonImg[i - 1].setAttribute("src", `./src/images/${i}-shiny.gif`);
+                        pokemonImg[i - 1].style.imageRendering = "pixelated";
+                        pokemonImg[i - 1].style.imageRendering = "smooth";
                 }
         });
 }
@@ -61,10 +60,27 @@ for (let i = 1; i <= 26; i++) {
         }
 }
 
-const playAudioButton = document.getElementById("play-audio-button");
-const audioElement = document.getElementById("audio-element");
+const playHomeAudio = document.getElementById("play-home-audio");
+const homeAudio = document.getElementById("home-audio");
 
-playAudioButton.addEventListener("click", () => {
-        audioElement.volume = 0.4;
-        audioElement.play();
+playHomeAudio.addEventListener("click", () => {
+        homeAudio.volume = 0.4;
+        homeAudio.play();
 });
+
+window.onscroll = function () {
+        scrollFunction();
+};
+
+function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("toTop").style.display = "block";
+        } else {
+                document.getElementById("toTop").style.display = "none";
+        }
+}
+
+function toTopFunction() {
+        const scrollToTop = document.documentElement || document.body;
+        scrollToTop.scrollIntoView({ behavior: "smooth" });
+}

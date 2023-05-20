@@ -31,15 +31,16 @@
         </a>
 
         <a href="#">
-            <img src="./src/images/pokedex.png" alt="pokedex" class="logo" id="play-audio-button">
+            <img src="./src/images/pokedex.png" alt="pokedex" class="logo" id="play-home-audio">
         </a>
 
-        <audio src="./src/audio/Pokédex Sound Effect.mp3" id="audio-element"></audio>
+        <audio src="./src/audio/Pokédex Sound Effect.mp3" id="home-audio"></audio>
 
         <button id="button-switch-theme">
-            <img src="./src/images/solrock.png" alt="light theme" class="theme-button" id="aaaa">
+            <img src="./src/images/solrock.png" alt="light theme" class="theme-button">
         </button>
     </header>
+
     <main>
         <ul class="pokedex">
             <li class="poke-card">
@@ -524,6 +525,10 @@
             </li>
         </ul>
     </main>
+
+    <button onclick="toTopFunction()" id="toTop" title="UP">
+        <img src="./src/images/up.png" alt="UP" class="to-top">
+    </button>
 
     <script src="./src/js/index.js"></script>
 </body>
